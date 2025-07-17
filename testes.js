@@ -41,9 +41,30 @@ switch (stack) {
     console.log(`Tecnologia indisponível para ${ stack }`);
     break;
 } */
-let frase = "Aprender JavaScript é gratificante! A linguagem JavaScript é bastante requisitada no mercado de trabalho";
 
-frase = frase.replace("JavaScript","JS");
+const tecnologias = [ "PHP", "Flutter", "HTML", "CSS", "C#", "React Native" ];
 
+function imprimeStack(tec) {
+  switch (tec) {
+    case "HTML":
+    case "CSS":
+      console.log('Front-end');
+      break;
 
-console.log(frase);
+    case "C#":
+    case "PHP":
+      console.log('Back-end');
+      break;
+
+    case "Flutter":
+    case "React Native":
+      console.log('Mobile');
+      break;
+
+    default:
+      console.log('Tecnologia não encontrada');
+      break;
+  }
+}
+
+tecnologias.forEach(imprimeStack);
